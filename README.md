@@ -2,7 +2,9 @@
 
 A business analytics capstone exploring sales performance, product and customer contribution, and shipping outcomes using PostgreSQL, SQL, and Tableau Public.
 
-> **Project status:** Capstone submitted; portfolio documentation and presentation refinements are in progress.
+## Dashboard preview
+
+![Northwind Traders dashboard overview](dashboard/dashboard-overview.png)
 
 ## Business context
 
@@ -33,7 +35,7 @@ The source workbook contains seven related tables:
 | Employees | 9 |
 | Shippers | 3 |
 
-The supplied workbook was used as the source for analysis. The dataset itself is **not included** in this repository. Confirm the dataset's sharing and licensing terms before publishing a copy.
+The supplied workbook was used as the source for analysis. The dataset itself is **not included** in this repository. 
 
 ## Tools
 
@@ -53,14 +55,10 @@ The supplied workbook was used as the source for analysis. The dataset itself is
 
 The current analysis reports the following measures:
 
-- **Estimated revenue:** 1,131,114.86
+- **Estimated revenue:** $1 131 114.86
 - **Orders:** 700
-- **Average order value:** 1,615.88
+- **Average order value:** $1 615.88
 - **Average order-to-ship time:** 8.6 days
-- **Orders shipped on or before the required date:** 668 of 700 (95.4%)
-- **Orders shipped after the required date:** 32
-
-Revenue is calculated from order-line quantities, unit prices, and discounts. The source data does not establish product profitability because reliable product costs and margins are not available. The currency label should be interpreted in line with the source workbook and project brief; do not infer profitability from revenue alone.
 
 ## Findings and implications
 
@@ -94,47 +92,18 @@ The relational structure connects:
 - Order Details to Products
 - Products to Categories
 
-Employees remain part of the relational model, but employee-contribution findings are not presented here because those calculations require further validation.
-
-## Repository structure
-
-```text
-northwind-traders-business-performance/
-├── README.md
-├── data/
-│   └── README.md
-├── sql/
-│   └── Northwind_Traders_SQL_Analysis_Reference.sql
-├── dashboard/
-│   └── screenshots/
-│       └── northwind-dashboard-overview.png
-└── docs/
-    ├── Northwind_Traders_Final_Report.docx
-    └── Northwind_Traders_Final_Presentation.pptx
-```
-
 ## Limitations
 
 - May 2015 is an incomplete reporting period in the available orders.
 - Actual delivery dates and reasons for delays are not available in the current analysis.
 - Product costs and margins are not available, so revenue must not be treated as profit.
-- Repeat-purchase and retention measures need a clearly defined customer-history analysis.
-- Tableau Public was connected to the original Excel workbook for the dashboard because a direct PostgreSQL connection was not available in the user's setup. The SQL analysis and dashboard therefore use separate source connections and should be reconciled carefully when the project is refined.
-- The SQL file in this repository is a **reference script** and should be reviewed and tested against the final database before being described as a reproducible end-to-end workflow.
 
-## Future improvements
-
-- Validate and organize SQL scripts into setup, quality checks, and analysis queries.
-- Reconcile dashboard calculations with SQL outputs.
-- Add delivery outcomes, delay reasons, product costs/margins, and customer purchase history if suitable data becomes available.
-- Improve the presentation with fewer words, clearer visual evidence, and a tighter insight-to-recommendation flow.
-- Add an interactive dashboard link after confirming the published dashboard is accessible and ready for public viewing.
 
 ## Author
 
 **Diana Chirwa**  
-Data analytics portfolio project | Zion Tech Hub Capstone
+Capstone Project | Zion Tech Hub
 
 ---
 
-This project is for portfolio and learning purposes. Findings describe the supplied dataset and should not be interpreted as proof of causes without further investigation.
+This project is for portfolio and learning purposes. 
